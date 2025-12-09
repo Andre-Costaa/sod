@@ -9,5 +9,9 @@
 !output/js/
 !output/js/*
 
-# Manter o .gitignore
+# Manter o .gitignore e vercel.json
 !.gitignore
+!vercel.json
+
+# Ignorar pasta .vercel local
+.vercel
