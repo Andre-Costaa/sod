@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho de Busca e Análise de Palavras-chave | SEO Audit 2025</title>
+    <meta name="description"
+        content="Análise abrangente de oportunidades de palavras-chave, incluindo ganhos rápidos, lacunas de conteúdo e recomendações de ranking estratégico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/swiss-style.css">
+</head>
+
+<body>
+    <!-- Modal -->
+    <div id="data-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" style="margin:0;">Keyword Opportunity Details</h3>
+                <button id="modal-close" class="close-btn">✕ Close</button>
+            </div>
+            <div id="modal-body-content" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-link">01. Summary</a>
+        <a href="seo-tecnico.html" class="nav-link">02. Technical</a>
+        <a href="seo-onpage.html" class="nav-link">03. Content</a>
+        <a href="seo-keywords.html" class="nav-link active">04. Search</a>
+    </nav>
+
+    <main class="container">
+        <!-- Report Header -->
+        <header class="header-hero">
+            <div class="report-meta">
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Report Section</div>
+                    <div class="report-meta-value">Search Performance & Keywords</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Data Source</div>
+                    <div class="report-meta-value">Google Search Console</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Time Period</div>
+                    <div class="report-meta-value">Last 28 Days</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Status</div>
+                    <div class="report-meta-value" style="color: var(--primary);">FAIR</div>
+                </div>
+            </div>
+            <h1>Search Performance<br><span style="color: var(--primary);">Keyword Opportunity Matrix</span></h1>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 900px;">
+                Data-driven analysis of search performance across Google Search Console metrics. This report identifies
+                quick win opportunities, content gaps, cannibalization issues, and strategic keyword targeting
+                recommendations based on 28 days of search data.
+            </p>
+        </header>
+
+        <!-- Performance Metrics Overview -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Search Performance Overview</h2>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Average Position</div>
+                    <div class="metric-value" style="color: var(--accent-success);">1.7</div>
+                    <div class="metric-description">Excellent for targeted queries</div>
+                    <div class="metric-trend up">↑ Strong brand authority</div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Total Keywords Tracked</div>
+                    <div class="metric-value">892</div>
+                    <div class="metric-description">Active search queries</div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Quick Win Keywords</div>
+                    <div class="metric-value" style="color: var(--primary);">12</div>
+                    <div class="metric-description">Positions 11-20 (Page 2)</div>
+                    <div class="metric-trend up">↑ High CTR potential</div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Content Gap Opportunities</div>
+                    <div class="metric-value" style="color: var(--accent-info);">47</div>
+                    <div class="metric-description">High volume, low rank</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Position Distribution -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Ranking Position Distribution</h2>
+            </div>
+
+            <div class="col-8">
+                <div class="chart-container">
+                    <div class="chart-title">Keywords by Ranking Position Range</div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Position 1-3 (Top Results)</span>
+                            <span class="bar-chart-label-value">142 keywords (15.9%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 15.9%; background: linear-gradient(90deg, var(--accent-success), var(--status-low));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Position 4-10 (Page 1)</span>
+                            <span class="bar-chart-label-value">287 keywords (32.2%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 32.2%; background: linear-gradient(90deg, var(--primary-light), var(--primary));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Position 11-20 (Page 2) 🎯 Quick Wins</span>
+                            <span class="bar-chart-label-value">12 keywords (1.3%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 1.3%; background: linear-gradient(90deg, var(--accent-warning), var(--primary));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Position 21-50 (Page 3-5)</span>
+                            <span class="bar-chart-label-value">204 keywords (22.9%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 22.9%; background: linear-gradient(90deg, var(--accent-warning), var(--accent-info));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Position 50+ (Deep Pages) 🔍 Content Gaps</span>
+                            <span class="bar-chart-label-value">247 keywords (27.7%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 27.7%; background: linear-gradient(90deg, #aeb1c3, var(--text-tertiary));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(8, 145, 178, 0.05); border-left: 4px solid var(--accent-info); border-radius: 0 var(--border-radius) var(--border-radius) 0;">
+                        <h4 style="margin-bottom: var(--space-md); color: var(--accent-info);">💡 Strategic Insight</h4>
+                        <p style="margin-bottom: var(--space-sm); color: var(--text-secondary);">
+                            Strong performance in positions 1-10 (48.1% of keywords) demonstrates excellent brand
+                            authority and content quality for targeted queries. However, <strong>27.7% of tracked
+                                keywords rank beyond position 50</strong>, representing significant untapped traffic
+                            potential.
+                        </p>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">
+                            The 12 keywords in positions 11-20 are prime "quick win" candidates — small optimizations
+                            could push them to Page 1, generating immediate traffic gains.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="metric-card" style="height: 100%;">
+                    <div class="metric-label">CTR Potential Analysis</div>
+                    <div style="margin-top: var(--space-lg);">
+                        <h4 style="color: var(--text-primary); margin-bottom: var(--space-md);">Position vs. CTR
+                            Benchmark</h4>
+
+                        <div style="margin-bottom: var(--space-lg);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                                <span style="font-size: 0.875rem; font-weight: 600;">Position 1</span>
+                                <span style="font-size: 0.875rem; color: var(--accent-success);">~31% CTR</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                Current: 142 keywords
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: var(--space-lg);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                                <span style="font-size: 0.875rem; font-weight: 600;">Positions 2-3</span>
+                                <span style="font-size: 0.875rem; color: var(--accent-success);">~15-18% CTR</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                Strong traffic generators
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: var(--space-lg);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                                <span style="font-size: 0.875rem; font-weight: 600;">Positions 4-10</span>
+                                <span style="font-size: 0.875rem; color: var(--primary);">~3-8% CTR</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                Optimization targets
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: var(--space-lg);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                                <span style="font-size: 0.875rem; font-weight: 600;">Positions 11-20</span>
+                                <span style="font-size: 0.875rem; color: var(--accent-warning);">~1-2% CTR</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                🎯 Quick win opportunities
+                            </div>
+                        </div>
+
+                        <div
+                            style="padding: var(--space-md); background: var(--bg-section); border-radius: var(--border-radius); margin-top: var(--space-xl);">
+                            <div
+                                style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); margin-bottom: var(--space-xs);">
+                                Traffic Gain Potential
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent-success);">
+                                +15-25%
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-top: var(--space-xs);">
+                                Est. from quick wins alone
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Opportunity Categories -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Strategic Keyword Opportunities</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                    Click any category to view the complete list of keywords with specific metrics and recommendations.
+                </p>
+            </div>
+
+            <!-- Quick Wins -->
+            <div class="col-4 data-block" data-csv-source="csv/keyword-opportunities.csv" data-filter="type=Quick Win">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">🎯 Quick Wins (Page 2)</h3>
+                    <div class="status-badge high">High Priority</div>
+                </div>
+                <div class="data-number" style="color: var(--primary);">12</div>
+                <p class="data-desc">
+                    <strong>Definition:</strong> Keywords currently ranking positions 11-20 with significant click
+                    potential if moved to Page 1.<br><br>
+                    <strong>Opportunity:</strong> Small optimizations (content expansion, meta updates, internal links)
+                    can generate immediate traffic gains with minimal effort.<br><br>
+                    <strong>Action Plan:</strong> Target 8-10 position improvement via focused on-page optimization and
+                    strategic backlinks.<br><br>
+                    <strong style="color: var(--primary);">→ Click to view all 12 quick win keywords</strong>
+                </p>
+            </div>
+
+            <!-- Content Gaps -->
+            <div class="col-4 data-block" data-csv-source="csv/keyword-opportunities.csv"
+                data-filter="type=Content Gap">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">🔍 Content Gaps</h3>
+                    <div class="status-badge medium">Medium Priority</div>
+                </div>
+                <div class="data-number" style="color: var(--accent-info);">47</div>
+                <p class="data-desc">
+                    <strong>Definition:</strong> High search volume keywords (>1,000 monthly impressions) currently
+                    ranking beyond position 20, indicating content quality or relevance gaps.<br><br>
+                    <strong>Opportunity:</strong> Creating or significantly expanding content targeting these keywords
+                    can capture large traffic volumes.<br><br>
+                    <strong>Action Plan:</strong> Content audit to identify weak pages, then comprehensive content
+                    expansion (800-1,500 words).<br><br>
+                    <strong style="color: var(--primary);">→ Click to view all 47 content gap opportunities</strong>
+                </p>
+            </div>
+
+            <!-- Cannibalization -->
+            <div class="col-4 data-block" data-csv-source="csv/keyword-opportunities.csv"
+                data-filter="type=Cannibalization">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">⚠️ Keyword Cannibalization</h3>
+                    <div class="status-badge medium">Medium Priority</div>
+                </div>
+                <div class="data-number">10</div>
+                <p class="data-desc">
+                    <strong>Definition:</strong> Keyword groups where multiple pages compete for the same query,
+                    diluting ranking signals and confusing Google.<br><br>
+                    <strong>Problem:</strong> Internal competition prevents any single page from achieving strong
+                    rankings.<br><br>
+                    <strong>Action Plan:</strong> Consolidate duplicate content, establish clear primary pages, use
+                    canonical tags, or differentiate targeting.<br><br>
+                    <strong style="color: var(--primary);">→ Click to view cannibalization conflicts</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Search Intent Analysis -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Search Intent Distribution & Analysis</h2>
+            </div>
+
+            <div class="col-6">
+                <div class="chart-container">
+                    <div class="chart-title">Keyword Volume by Search Intent Type</div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Informational</span>
+                            <span class="bar-chart-label-value">885 keywords (99.2%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 99.2%; background: linear-gradient(90deg, var(--primary), var(--primary-dark));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Commercial Investigation</span>
+                            <span class="bar-chart-label-value">4 keywords (0.5%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 0.5%; background: linear-gradient(90deg, var(--accent-warning), var(--accent-danger));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Navigational (Brand)</span>
+                            <span class="bar-chart-label-value">2 keywords (0.2%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 0.2%; background: linear-gradient(90deg, var(--accent-info), var(--accent-success));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">Transactional</span>
+                            <span class="bar-chart-label-value">1 keyword (0.1%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 0.1%; background: linear-gradient(90deg, var(--accent-success), var(--status-low));">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="callout">
+                    <div class="callout-title">📊 Intent Distribution Analysis</div>
+
+                    <h4
+                        style="margin-top: var(--space-lg); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        Current State: Information-Dominant
+                    </h4>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        The site demonstrates a <strong>99.2% informational intent skew</strong>, aligning perfectly
+                        with a blog/knowledge base structure focused on Ethics and Compliance education. This is
+                        appropriate for the content type.
+                    </p>
+
+                    <h4
+                        style="margin-top: var(--space-xl); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        Strategic Concern: Conversion Gap
+                    </h4>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                        However, the <strong>near-zero commercial intent representation (0.5%)</strong> indicates a
+                        failure to capture users at the consideration/decision stages of the funnel. This limits
+                        business value generation from organic traffic.
+                    </p>
+
+                    <h4
+                        style="margin-top: var(--space-xl); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        Recommendations
+                    </h4>
+                    <ol style="margin-left: var(--space-xl); line-height: 2; color: var(--text-secondary);">
+                        <li><strong>Add commercial intent modifiers:</strong> Target "best," "comparison," "review"
+                            variants of core topics</li>
+                        <li><strong>Create service-oriented content:</strong> "How to implement," "consulting,"
+                            "solutions" pages</li>
+                        <li><strong>Optimize conversion paths:</strong> Add CTAs in informational content linking to
+                            commercial pages</li>
+                        <li><strong>Monitor the 4 commercial keywords:</strong> Prioritize these in quick win
+                            optimizations</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Priority Action Plan -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Keyword Optimization Priority Matrix</h2>
+            </div>
+
+            <div class="col-12">
+                <div class="section">
+                    <div class="grid" style="gap: var(--space-xl);">
+                        <div class="col-4">
+                            <div
+                                style="background: rgba(38, 51, 115, 0.05); border-left: 4px solid var(--primary); padding: var(--space-lg); border-radius: 0 var(--border-radius) var(--border-radius) 0;">
+                                <h4 style="margin-bottom: var(--space-md); color: var(--primary);">Phase 1: Quick Wins
+                                    (Weeks 8-10)</h4>
+                                <p
+                                    style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+                                    <strong>12 keywords</strong> in positions 11-20
+                                </p>
+                                <ul
+                                    style="margin-left: var(--space-lg); line-height: 1.8; color: var(--text-secondary); font-size: 0.875rem;">
+                                    <li>Expand target page content by 300-500 words</li>
+                                    <li>Add 2-3 relevant internal links</li>
+                                    <li>Optimize meta title/description</li>
+                                    <li>Target 1-2 quality backlinks per keyword</li>
+                                    <li>Expected gain: +15-20% traffic</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div
+                                style="background: rgba(255, 110, 0, 0.05); border-left: 4px solid var(--accent-info); padding: var(--space-lg); border-radius: 0 var(--border-radius) var(--border-radius) 0;">
+                                <h4 style="margin-bottom: var(--space-md); color: var(--accent-info);">Phase 2: Content
+                                    Gaps (Weeks 12-16)</h4>
+                                <p
+                                    style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+                                    <strong>47 keywords</strong> with high volume, low rank
+                                </p>
+                                <ul
+                                    style="margin-left: var(--space-lg); line-height: 1.8; color: var(--text-secondary); font-size: 0.875rem;">
+                                    <li>Create/expand content to 1,000-1,500 words</li>
+                                    <li>Build comprehensive topic coverage</li>
+                                    <li>Add multimedia (images, videos, infographics)</li>
+                                    <li>Develop strategic backlink campaigns</li>
+                                    <li>Expected gain: +25-35% traffic (long-term)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div
+                                style="background: rgba(245, 201, 79, 0.05); border-left: 4px solid var(--accent-warning); padding: var(--space-lg); border-radius: 0 var(--border-radius) var(--border-radius) 0;">
+                                <h4 style="margin-bottom: var(--space-md); color: var(--accent-warning);">Phase 3:
+                                    Cannibalization Fix (Week 11)</h4>
+                                <p
+                                    style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+                                    <strong>10 conflict groups</strong> requiring consolidation
+                                </p>
+                                <ul
+                                    style="margin-left: var(--space-lg); line-height: 1.8; color: var(--text-secondary); font-size: 0.875rem;">
+                                    <li>Identify strongest page per keyword group</li>
+                                    <li>Consolidate or differentiate competing pages</li>
+                                    <li>Implement canonical tags where needed</li>
+                                    <li>Update internal linking strategy</li>
+                                    <li>Expected gain: +5-10% ranking clarity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Keyword Database -->
+        <section class="grid">
+            <div class="col-12">
+                <h2>Complete Keyword Opportunity Database</h2>
+            </div>
+
+            <div class="col-12">
+                <div class="section">
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">
+                        Access the complete database of keyword opportunities with GSC metrics, opportunity type, and
+                        priority scores. Filter by type or search for specific keywords.
+                    </p>
+
+                    <button class="btn btn-primary" data-csv-source="csv/keyword-opportunities.csv">
+                        🔍 Load Complete Keyword Database
+                    </button>
+
+                    <div id="database-container" style="margin-top: var(--space-xl);"></div>
+
+                    <div class="grid" style="margin-top: var(--space-2xl); gap: var(--space-xl);">
+                        <div class="col-6">
+                            <h3 style="margin-bottom: var(--space-md);">Monitoring & Tracking</h3>
+                            <div
+                                style="background: var(--bg-section); padding: var(--space-lg); border-radius: var(--border-radius); border-left: 4px solid var(--primary);">
+                                <h4 style="margin-bottom: var(--space-md); color: var(--text-primary);">Implementation
+                                    Checklist</h4>
+                                <ol style="margin-left: var(--space-lg); line-height: 2; color: var(--text-secondary);">
+                                    <li>Set up rank tracking for all 12 quick win keywords</li>
+                                    <li>Create content briefs for top 20 content gap keywords</li>
+                                    <li>Map cannibalization conflicts to resolution strategy</li>
+                                    <li>Establish weekly GSC monitoring dashboard</li>
+                                    <li>Track CTR improvements post-optimization</li>
+                                    <li>Monitor Core Web Vitals impact on rankings</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h3 style="margin-bottom: var(--space-md);">Expected Results Timeline</h3>
+                            <div
+                                style="background: var(--bg-section); padding: var(--space-lg); border-radius: var(--border-radius);">
+                                <table style="width: 100%; font-size: 0.875rem;">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--border-color-dark);">
+                                            <th style="padding: var(--space-sm) 0; text-align: left; font-weight: 600;">
+                                                Milestone</th>
+                                            <th
+                                                style="padding: var(--space-sm) 0; text-align: right; font-weight: 600;">
+                                                Traffic Gain</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="border-bottom: 1px solid var(--border-color);">
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">Week
+                                                10 (Quick Wins)</td>
+                                            <td
+                                                style="padding: var(--space-sm) 0; text-align: right; font-weight: 600; color: var(--accent-success);">
+                                                +15-20%</td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid var(--border-color);">
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">Week
+                                                12 (Cannibalization Fix)</td>
+                                            <td
+                                                style="padding: var(--space-sm) 0; text-align: right; font-weight: 600; color: var(--primary);">
+                                                +5-10%</td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid var(--border-color);">
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">Week
+                                                16 (Content Gaps Start)</td>
+                                            <td
+                                                style="padding: var(--space-sm) 0; text-align: right; font-weight: 600; color: var(--primary);">
+                                                +10-15%</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: var(--space-sm) 0; font-weight: 600;">Total (16 weeks)
+                                            </td>
+                                            <td
+                                                style="padding: var(--space-sm) 0; text-align: right; font-weight: 600; color: var(--accent-success); font-size: 1.125rem;">
+                                                +30-45%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div
+                                    style="margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--border-color);">
+                                    <p style="font-size: 0.875rem; color: var(--text-tertiary); margin: 0;">
+                                        Assumes consistent execution alongside technical and content quality
+                                        improvements.
+                                        Results may vary based on competition and algorithm changes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/swiss-main.js"></script>
+</body>
+
+</html>

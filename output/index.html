@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo Executivo da Auditoria SEO | CanaldaEtica 2025</title>
+    <meta name="description"
+        content="Relatório Completo de Auditoria SEO - Resumo Executivo e Recomendações Estratégicas">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/swiss-style.css">
+</head>
+
+<body>
+    <!-- Modal Container -->
+    <div id="data-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" style="margin:0;">Visualização de Dados</h3>
+                <button id="modal-close" class="close-btn">✕ Fechar</button>
+            </div>
+            <div id="modal-body-content" class="modal-body">
+                <!-- Data loads here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-link active">01. Resumo</a>
+        <a href="seo-tecnico.html" class="nav-link">02. Técnico</a>
+        <a href="seo-onpage.html" class="nav-link">03. Conteúdo</a>
+        <a href="seo-keywords.html" class="nav-link">04. Busca</a>
+    </nav>
+
+    <main class="container">
+        <!-- Report Header -->
+        <header class="header-hero">
+            <div class="report-meta">
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Cliente</div>
+                    <div class="report-meta-value">CanaldaEtica</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Tipo de Relatório</div>
+                    <div class="report-meta-value">Auditoria SEO Técnica 2025</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Data da Auditoria</div>
+                    <div class="report-meta-value">Dezembro 2025</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Escopo</div>
+                    <div class="report-meta-value">893 URLs Analisadas</div>
+                </div>
+            </div>
+            <h1>Auditoria SEO<br>Resumo Executivo</h1>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 800px;">
+                Análise abrangente da infraestrutura técnica, qualidade de conteúdo e desempenho de busca em 893
+                páginas. Este relatório identifica problemas críticos, quantifica seus impactos e fornece
+                recomendações estratégicas para otimização.
+            </p>
+        </header>
+
+        <!-- Overall Performance Score -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Avaliação Geral de Desempenho</h2>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card" style="text-align: center; border: 3px solid var(--accent-danger);">
+                    <div class="metric-label">Pontuação Geral de Saúde SEO</div>
+                    <div class="metric-value" style="font-size: 4rem; color: var(--accent-danger);">42<span
+                            style="font-size: 2rem; color: var(--text-tertiary);">/100</span></div>
+                    <div class="status-badge critical">Problemas Críticos Encontrados</div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Total de URLs Rastreadas</div>
+                    <div class="metric-value">893</div>
+                    <div class="metric-description">Cobertura completa da auditoria do site</div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Total de Problemas Detectados</div>
+                    <div class="metric-value" style="color: var(--accent-danger);">23.000+</div>
+                    <div class="metric-description">Em todas as dimensões da auditoria</div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Tempo Estimado de Recuperação</div>
+                    <div class="metric-value" style="font-size: 1.75rem;">12-16<span
+                            style="font-size: 1rem; color: var(--text-tertiary);"> semanas</span></div>
+                    <div class="metric-description">Com recursos dedicados</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Findings Summary -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Resumo de Descobertas Críticas</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                    Três problemas críticos dominam esta auditoria e requerem atenção imediata para prevenir maior
+                    deterioração no ranking.
+                </p>
+            </div>
+
+            <div class="col-4">
+                <div class="callout danger">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                        <div class="callout-title">🚨 Crítico: Desempenho Técnico</div>
+                        <div class="status-badge critical">Prioridade 1</div>
+                    </div>
+                    <p
+                        style="font-weight: 600; font-size: 2rem; margin-bottom: var(--space-sm); color: var(--accent-danger);">
+                        19.822</p>
+                    <p style="margin-bottom: var(--space-sm);"><strong>Imagens não otimizadas</strong> sem lazy
+                        loading, causando degradação severa na velocidade da página.</p>
+                    <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 0;">
+                        <strong>Impacto:</strong> ~480MB de banda desperdiçada, atraso de 2,4s+ em mobile
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="callout warning">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                        <div class="callout-title">⚠️ Alto: Crise de Conteúdo Raso</div>
+                        <div class="status-badge high">Prioridade 2</div>
+                    </div>
+                    <p
+                        style="font-weight: 600; font-size: 2rem; margin-bottom: var(--space-sm); color: var(--accent-warning);">
+                        632 Páginas</p>
+                    <p style="margin-bottom: var(--space-sm);"><strong>70% do conteúdo do site</strong> tem menos de 300
+                        palavras, fazendo com que o Google ignore essas páginas.</p>
+                    <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 0;">
+                        <strong>Impacto:</strong> Status "Rastreada - atualmente não indexada"
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="callout" style="border-left-color: var(--accent-info);">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                        <div class="callout-title">📊 Médio: Oportunidade de Palavras-chave</div>
+                        <div class="status-badge medium">Prioridade 3</div>
+                    </div>
+                    <p
+                        style="font-weight: 600; font-size: 2rem; margin-bottom: var(--space-sm); color: var(--accent-info);">
+                        47 Palavras-chave</p>
+                    <p style="margin-bottom: var(--space-sm);"><strong>Palavras-chave de alto volume</strong> ranqueando
+                        além da
+                        posição 20, representando potencial de tráfego inexplorado.</p>
+                    <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 0;">
+                        <strong>Oportunidade:</strong> Prioridade de investimento em lacunas de conteúdo
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audit Dimension Breakdown -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Detalhamento das Dimensões da Auditoria</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                    Clique em qualquer card abaixo para acessar o relatório de análise detalhada daquela dimensão.
+                </p>
+            </div>
+
+            <!-- Technical -->
+            <div class="col-6 data-block" onclick="window.location.href='seo-tecnico.html'">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">02. Infraestrutura Técnica</h3>
+                    <div class="status-badge critical">FALHA</div>
+                </div>
+                <div class="data-number" style="color: var(--accent-danger);">19mil+</div>
+                <p class="data-desc">
+                    <strong>Problemas críticos identificados:</strong><br>
+                    • 19.822 imagens sem lazy loading<br>
+                    • 15.401 imagens sem dimensões (risco de CLS)<br>
+                    • 7.037 recursos CSS bloqueadores de renderização<br>
+                    • 2.308 violações de acessibilidade (falta de texto alt)<br><br>
+                    <strong style="color: var(--primary);">→ Clique para ver análise técnica completa</strong>
+                </p>
+            </div>
+
+            <!-- Content/On-Page -->
+            <div class="col-6 data-block" onclick="window.location.href='seo-onpage.html'">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">03. Qualidade e Estrutura de Conteúdo</h3>
+                    <div class="status-badge high">RUIM</div>
+                </div>
+                <div class="data-number" style="color: var(--accent-warning);">632</div>
+                <p class="data-desc">
+                    <strong>Problemas de qualidade de conteúdo:</strong><br>
+                    • 632 páginas com <300 palavras (conteúdo raso)<br>
+                        • 37 páginas sem meta descriptions<br>
+                        • 123 title tags muito longas (truncadas nas SERPs)<br>
+                        • Contagem média de palavras: apenas 452 palavras<br><br>
+                        <strong style="color: var(--primary);">→ Clique para ver banco de dados de análise de
+                            conteúdo</strong>
+                </p>
+            </div>
+
+            <!-- Search Performance -->
+            <div class="col-6 data-block" onclick="window.location.href='seo-keywords.html'">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">04. Desempenho de Busca e Palavras-chave</h3>
+                    <div class="status-badge medium">RAZOÁVEL</div>
+                </div>
+                <div class="data-number" style="color: var(--primary);">1.7</div>
+                <p class="data-desc">
+                    <strong>Análise de oportunidades de busca:</strong><br>
+                    • Posição média de ranqueamento: 1.7 (excelente)<br>
+                    • 12 palavras-chave de ganho rápido (posições 11-20)<br>
+                    • 47 oportunidades de lacunas de conteúdo (alto volume, baixo ranking)<br>
+                    • 10 conflitos de canibalização de palavras-chave<br><br>
+                    <strong style="color: var(--primary);">→ Clique para ver matriz de oportunidades de
+                        palavras-chave</strong>
+                </p>
+            </div>
+
+            <!-- Content Pruning -->
+            <div class="col-6 data-block"
+                style="cursor: default; border-color: var(--accent-danger); background: linear-gradient(135deg, rgba(225, 110, 169, 0.05) 0%, var(--bg-surface) 100%);">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">05. Content Pruning - Poda de Conteúdo</h3>
+                    <div class="status-badge high">CRÍTICO</div>
+                </div>
+                <div class="data-number" style="color: var(--accent-danger);">888</div>
+                <p class="data-desc">
+                    <strong>Páginas candidatas a pruning:</strong><br>
+                    • 888 URLs (68,7%) com 0 cliques nos últimos 3 meses<br>
+                    • 627 páginas com thin content (<100 palavras)<br>
+                        • ~500-550 páginas na interseção (0 cliques + thin)<br>
+                        • <strong>Recomendação:</strong> Pruning de 35-40% (~450-520 páginas)<br><br>
+                        <strong style="color: var(--accent-danger);">💡 Impacto esperado:</strong> CTR +87-150%, Crawl
+                        Budget +50-70%
+                </p>
+            </div>
+
+            <!-- Strategic Recommendations -->
+            <div class="col-6 data-block"
+                style="cursor: default; border-color: var(--primary); background: linear-gradient(135deg, var(--bg-canvas) 0%, var(--bg-surface) 100%);">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">Recomendações Estratégicas</h3>
+                    <div class="status-badge info">Roadmap</div>
+                </div>
+                <div class="data-number" style="color: var(--primary); font-size: 2rem;">5 Fases</div>
+                <p class="data-desc">
+                    <strong>Roteiro de implementação:</strong><br>
+                    • Fase 1: Correções técnicas emergenciais (imagens, CSS)<br>
+                    • Fase 2: Expansão de profundidade de conteúdo<br>
+                    • Fase 3: Otimização de meta tags<br>
+                    • Fase 4: Rankings de ganho rápido<br>
+                    • Fase 5: Investimento em lacunas de conteúdo<br><br>
+                    <strong style="color: var(--primary);">Veja o plano detalhado abaixo ↓</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Strategic Roadmap -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Roteiro de Implementação Estratégica</h2>
+            </div>
+
+            <div class="col-12">
+                <div class="section">
+                    <div style="margin-bottom: var(--space-xl);">
+                        <button class="btn btn-primary" data-csv-source="csv/action-plan.csv">
+                            📋 Carregar Plano de Ação Completo (15 Iniciativas Estratégicas)
+                        </button>
+                        <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: var(--space-sm);">
+                            Estruturado em 5 fases com ações priorizadas e sequenciadas no tempo
+                        </p>
+                    </div>
+                    <div id="action-plan-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Brief -->
+        <section class="grid">
+            <div class="col-12">
+                <h2>Análise Executiva e Contexto Estratégico</h2>
+            </div>
+
+            <div class="col-12">
+                <div class="callout danger">
+                    <div class="callout-title">🎯 DESCOBERTA ESTRATÉGICA PRINCIPAL: A ARMADILHA DO CONTEÚDO RASO</div>
+
+                    <h3
+                        style="margin-top: var(--space-lg); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        Análise do Estado Atual
+                    </h3>
+                    <p>
+                        A auditoria abrangente revela um problema estrutural sistêmico afetando <strong>70% do
+                            site (632 URLs)</strong> que fundamentalmente prejudica o desempenho SEO. Embora o site
+                        demonstre forte capacidade de ranqueamento para consultas específicas relacionadas à marca
+                        (posição média
+                        1.7), a maioria das páginas de conteúdo sofre de déficits severos de qualidade.
+                    </p>
+
+                    <h3
+                        style="margin-top: var(--space-xl); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        O Problema: Crise Dupla
+                    </h3>
+                    <p style="margin-bottom: var(--space-md);">
+                        <strong>1. Deficiência de Profundidade de Conteúdo:</strong> 632 páginas contêm menos de 300
+                        palavras, colocando-as
+                        abaixo do limite prático de indexação do Google para conteúdo significativo. A contagem mediana
+                        de
+                        452 palavras é insuficiente para ranqueamento competitivo, particularmente em categorias YMYL
+                        (Your Money,
+                        Your Life) como Ética e Compliance.
+                    </p>
+                    <p>
+                        <strong>2. Degradação de Desempenho Técnico:</strong> Simultaneamente, a
+                        infraestrutura técnica está severamente inchada com 19.822 imagens não otimizadas sem
+                        implementação de lazy loading,
+                        criando aproximadamente ~480MB de banda desperdiçada e contribuindo para 2,4+
+                        segundos de atraso no carregamento de páginas em mobile.
+                    </p>
+
+                    <h3
+                        style="margin-top: var(--space-xl); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        Impacto nos Negócios
+                    </h3>
+                    <p>
+                        Os dados do Google Search Console indicam um status de "Rastreada - atualmente não indexada"
+                        para a
+                        maioria das páginas de conteúdo raso, significando que essas páginas são efetivamente invisíveis
+                        nos resultados de busca.
+                        Enquanto isso, as poucas páginas que <em>conseguem</em> ranquear são prejudicadas por
+                        pontuações ruins de Core Web Vitals decorrentes de problemas técnicos.
+                    </p>
+
+                    <h3
+                        style="margin-top: var(--space-xl); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        Recomendação Estratégica
+                    </h3>
+                    <p style="font-weight: 600; font-size: 1.125rem; color: var(--accent-danger);">
+                        INTERROMPER A PRODUÇÃO DE NOVO CONTEÚDO IMEDIATAMENTE
+                    </p>
+                    <p style="margin-bottom: var(--space-md);">
+                        Criar conteúdo raso adicional agravará o problema. Em vez disso, implemente uma estratégia de
+                        recuperação de duas frentes:
+                    </p>
+                    <ol style="margin-left: var(--space-xl); line-height: 1.8;">
+                        <li><strong>Estabilização Técnica Emergencial (Semanas 1-4):</strong> Implementar lazy loading
+                            automático de imagens,
+                            converter assets para formato WebP e eliminar recursos bloqueadores de renderização para
+                            restaurar a base técnica.</li>
+                        <li><strong>Expansão de Profundidade de Conteúdo (Semanas 5-12):</strong> Expandir
+                            sistematicamente as 632
+                            páginas de conteúdo raso para profundidade de 800-1.500 palavras com informações
+                            estruturadas, exemplos e
+                            linkagem interna.</li>
+                        <li><strong>Otimização de Ganhos Rápidos (Semanas 8-10):</strong> Simultaneamente otimizar as 12
+                            palavras-chave atualmente ranqueando nas posições 11-20 para capturar ganhos de tráfego
+                            imediatos.</li>
+                    </ol>
+
+                    <h3
+                        style="margin-top: var(--space-xl); margin-bottom: var(--space-md); color: var(--text-primary);">
+                        Resultados Esperados
+                    </h3>
+                    <p style="margin-bottom: 0;">
+                        Seguir este roteiro deve resultar em: (1) melhoria de 60-70% nas pontuações de Core Web Vitals
+                        em mobile
+                        dentro de 4 semanas, (2) recuperação gradual de indexação para páginas de conteúdo expandido ao
+                        longo de 8-12
+                        semanas, e (3) aumento de tráfego orgânico de 15-25% dentro de 16 semanas conforme as páginas
+                        adormecidas começam a ranquear.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/swiss-main.js"></script>
+    <!-- Script de auto-load removido para evitar abertura automática da tabela -->
+</body>
+
+</html>

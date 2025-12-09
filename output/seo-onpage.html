@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualidade de Conteúdo e Análise Estrutural | SEO Audit 2025</title>
+    <meta name="description"
+        content="Auditoria de conteúdo abrangente cobrindo métricas de qualidade, otimização de meta e recomendações de estratégia de conteúdo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/swiss-style.css">
+</head>
+
+<body>
+    <!-- Modal -->
+    <div id="data-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" style="margin:0;">Content Issue Details</h3>
+                <button id="modal-close" class="close-btn">✕ Close</button>
+            </div>
+            <div id="modal-body-content" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-link">01. Summary</a>
+        <a href="seo-tecnico.html" class="nav-link">02. Technical</a>
+        <a href="seo-onpage.html" class="nav-link active">03. Content</a>
+        <a href="seo-keywords.html" class="nav-link">04. Search</a>
+    </nav>
+
+    <main class="container">
+        <!-- Report Header -->
+        <header class="header-hero">
+            <div class="report-meta">
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Report Section</div>
+                    <div class="report-meta-value">Content Quality & Architecture</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Pages Analyzed</div>
+                    <div class="report-meta-value">893 URLs</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Critical Issues</div>
+                    <div class="report-meta-value" style="color: var(--accent-warning);">632 Pages</div>
+                </div>
+                <div class="report-meta-item">
+                    <div class="report-meta-label">Status</div>
+                    <div class="report-meta-value" style="color: var(--accent-warning);">POOR</div>
+                </div>
+            </div>
+            <h1>Content Quality<br><span style="color: var(--primary);">Structure & Meta Analysis</span></h1>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 900px;">
+                In-depth analysis of content architecture, quality metrics, and meta optimization across 893 pages.
+                This report identifies thin content, missing metadata, and provides strategic recommendations for
+                content expansion and optimization.
+            </p>
+        </header>
+
+        <!-- Content Quality Metrics -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Content Quality Metrics</h2>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Average Word Count</div>
+                    <div class="metric-value" style="color: var(--accent-warning);">452</div>
+                    <div class="metric-description">Below competitive threshold</div>
+                    <div class="metric-trend down">↓ 28% below YMYL standard</div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="metric-card">
+                    <div class="metric-label">Thin Content Pages</div>
+                    <div class="metric-value" style="color: var(--accent-danger);">632</div>
+                    <div class="metric-description">Pages with <300 words (70.8%)</div>
+                            <div class="metric-trend down">↓ High risk of de-indexation</div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="metric-card">
+                        <div class="metric-label">Missing Meta Descriptions</div>
+                        <div class="metric-value">37</div>
+                        <div class="metric-description">Lost SERP CTR opportunities</div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="metric-card">
+                        <div class="metric-label">Content Depth Score</div>
+                        <div class="metric-value" style="color: var(--accent-warning);">3.2<span
+                                style="font-size: 1.5rem; color: var(--text-tertiary);">/10</span></div>
+                        <div class="metric-description">Composite quality metric</div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Word Count Distribution -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Content Length Distribution Analysis</h2>
+            </div>
+
+            <div class="col-8">
+                <div class="chart-container">
+                    <div class="chart-title">Page Count by Word Count Range</div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">0-100 words (Extremely Thin)</span>
+                            <span class="bar-chart-label-value">187 pages (20.9%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 20.9%; background: linear-gradient(90deg, #b03875, var(--accent-danger));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">101-300 words (Thin)</span>
+                            <span class="bar-chart-label-value">445 pages (49.8%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 49.8%; background: linear-gradient(90deg, var(--accent-danger), var(--accent-warning));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">301-600 words (Moderate)</span>
+                            <span class="bar-chart-label-value">158 pages (17.7%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 17.7%; background: linear-gradient(90deg, var(--accent-warning), var(--primary));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">601-1000 words (Good)</span>
+                            <span class="bar-chart-label-value">78 pages (8.7%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 8.7%; background: linear-gradient(90deg, var(--primary), var(--accent-info));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span class="bar-chart-label-text">1000+ words (Comprehensive)</span>
+                            <span class="bar-chart-label-value">25 pages (2.8%)</span>
+                        </div>
+                        <div class="bar-chart-track">
+                            <div class="bar-chart-fill"
+                                style="width: 2.8%; background: linear-gradient(90deg, var(--accent-info), var(--accent-success));">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(225, 110, 169, 0.05); border-left: 4px solid var(--accent-danger); border-radius: 0 var(--border-radius) var(--border-radius) 0;">
+                        <h4 style="margin-bottom: var(--space-md); color: var(--accent-danger);">⚠️ Critical Finding
+                        </h4>
+                        <p style="margin-bottom: var(--space-sm); color: var(--text-secondary);">
+                            <strong>70.7% of all pages (632 URLs)</strong> fall below the 300-word threshold, which is
+                            Google's practical minimum for meaningful content indexation, especially for YMYL (Your
+                            Money, Your Life) topics like Ethics and Compliance.
+                        </p>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">
+                            Pages in the 0-300 word range are likely receiving "Crawled - currently not indexed" status
+                            in GSC, meaning they contribute no organic traffic value.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="metric-card" style="height: 100%;">
+                    <div class="metric-label">Target Content Depth</div>
+                    <div style="margin-top: var(--space-lg);">
+                        <h4 style="color: var(--text-primary); margin-bottom: var(--space-md);">Recommended Ranges by
+                            Type</h4>
+
+                        <div style="margin-bottom: var(--space-lg);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                                <span style="font-size: 0.875rem; font-weight: 600;">Hub/Pillar Pages</span>
+                                <span style="font-size: 0.875rem; color: var(--text-tertiary);">1,500-3,000 words</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                Comprehensive guides, main topic pages
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: var(--space-lg);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                                <span style="font-size: 0.875rem; font-weight: 600;">Supporting Articles</span>
+                                <span style="font-size: 0.875rem; color: var(--text-tertiary);">800-1,500 words</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                Detailed subtopic explanations
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: var(--space-lg);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                                <span style="font-size: 0.875rem; font-weight: 600;">Definitions/FAQs</span>
+                                <span style="font-size: 0.875rem; color: var(--text-tertiary);">500-800 words</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                Focused concept explanations
+                            </div>
+                        </div>
+
+                        <div
+                            style="padding: var(--space-md); background: var(--bg-section); border-radius: var(--border-radius); margin-top: var(--space-xl);">
+                            <div
+                                style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); margin-bottom: var(--space-xs);">
+                                Industry Benchmark (YMYL)
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">
+                                900-1,200 words
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-top: var(--space-xs);">
+                                Minimum competitive depth
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Critical Content Issues -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Critical Content Quality Issues</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                    Click any card to view the complete list of affected pages with specific data and recommendations.
+                </p>
+            </div>
+
+            <!-- Thin Content -->
+            <div class="col-6 data-block" data-csv-source="csv/pages-with-issues.csv"
+                data-filter="issue_type=very_thin_content">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">Thin Content (<300 words)</h3>
+                            <div class="status-badge critical">Critical</div>
+                </div>
+                <div class="data-number" style="color: var(--accent-danger);">632</div>
+                <p class="data-desc">
+                    <strong>Problem:</strong> 70.8% of pages have insufficient content depth for Google's quality
+                    standards, particularly problematic for YMYL content requiring E-E-A-T signals.<br><br>
+                    <strong>Impact:</strong> "Crawled - currently not indexed" status, zero organic traffic potential,
+                    wasted crawl budget<br><br>
+                    <strong>Solution:</strong> Systematically expand to 800-1,500 words with structured information,
+                    examples, internal links, and multimedia. Prioritize by existing backlink count and traffic
+                    potential.<br><br>
+                    <strong style="color: var(--primary);">→ Click to view all 632 thin content pages</strong>
+                </p>
+            </div>
+
+            <!-- Missing Meta Descriptions -->
+            <div class="col-6 data-block" data-csv-source="csv/pages-with-issues.csv"
+                data-filter="issue_type=missing_meta_description">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">Missing Meta Descriptions</h3>
+                    <div class="status-badge high">High</div>
+                </div>
+                <div class="data-number" style="color: var(--accent-warning);">37</div>
+                <p class="data-desc">
+                    <strong>Problem:</strong> Pages lacking meta descriptions force Google to auto-generate snippets,
+                    often resulting in poor SERP presentation and reduced click-through rates.<br><br>
+                    <strong>Impact:</strong> Lost CTR opportunity (2-5% lower than optimized), poor SERP control,
+                    missed keyword targeting<br><br>
+                    <strong>Solution:</strong> Write compelling 150-160 character descriptions incorporating target
+                    keywords and clear value propositions. Include calls-to-action where appropriate.<br><br>
+                    <strong style="color: var(--primary);">→ Click to view all 37 pages needing meta
+                        descriptions</strong>
+                </p>
+            </div>
+
+            <!-- Title Tags Too Long -->
+            <div class="col-4 data-block" data-csv-source="csv/pages-with-issues.csv"
+                data-filter="issue_type=title_too_long">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">Truncated Title Tags</h3>
+                    <div class="status-badge medium">Medium</div>
+                </div>
+                <div class="data-number">123</div>
+                <p class="data-desc">
+                    <strong>Problem:</strong> Title tags exceeding 60 characters are truncated in search results,
+                    cutting off important keywords and messaging.<br><br>
+                    <strong>Solution:</strong> Rewrite to 50-60 characters, front-load target keywords.<br><br>
+                    <strong style="color: var(--primary);">→ View affected pages</strong>
+                </p>
+            </div>
+
+            <!-- Low Readability -->
+            <div class="col-4 data-block" data-csv-source="csv/pages-with-issues.csv"
+                data-filter="issue_type=low_readability">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">Readability Issues</h3>
+                    <div class="status-badge medium">Medium</div>
+                </div>
+                <div class="data-number">89</div>
+                <p class="data-desc">
+                    <strong>Problem:</strong> Flesch-Kincaid readability scores below 50 indicate overly complex text
+                    that reduces user engagement.<br><br>
+                    <strong>Solution:</strong> Simplify sentence structure, use active voice, break into shorter
+                    paragraphs.<br><br>
+                    <strong style="color: var(--primary);">→ View readability issues</strong>
+                </p>
+            </div>
+
+            <!-- Duplicate Titles -->
+            <div class="col-4 data-block" data-csv-source="csv/pages-with-issues.csv"
+                data-filter="issue_type=duplicate_title">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+                    <h3 style="font-size: 1.25rem; margin: 0;">Duplicate Title Tags</h3>
+                    <div class="status-badge medium">Medium</div>
+                </div>
+                <div class="data-number">42</div>
+                <p class="data-desc">
+                    <strong>Problem:</strong> Multiple pages sharing identical title tags cause internal competition
+                    and indexation confusion.<br><br>
+                    <strong>Solution:</strong> Create unique, descriptive titles for each page reflecting specific
+                    content.<br><br>
+                    <strong style="color: var(--primary);">→ View duplicates</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Content Pruning Strategy -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>⚠️ Content Pruning - Estratégia de Poda de Conteúdo</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                    Análise cruzada entre performance do GSC (últimos 3 meses) e auditoria de conteúdo revela um
+                    cenário crítico de <strong style="color: var(--accent-danger);">excesso de páginas de baixa
+                        performance</strong> diluindo a autoridade do domínio.
+                </p>
+            </div>
+
+            <!-- Performance by Clicks -->
+            <div class="col-12">
+                <div class="section">
+                    <h3>Distribuição de Performance por Cliques (GSC - 3 meses)</h3>
+                    <div class="grid" style="margin-top: var(--space-lg);">
+                        <div class="col-3">
+                            <div class="metric-card" style="border-color: var(--accent-danger);">
+                                <div class="metric-label">0 Cliques</div>
+                                <div class="metric-value" style="color: var(--accent-danger);">888</div>
+                                <div class="metric-description">68,7% do total</div>
+                                <div class="metric-trend down">⚠️ Candidatas a pruning</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="metric-card">
+                                <div class="metric-label">1 Clique</div>
+                                <div class="metric-value">112</div>
+                                <div class="metric-description">8,7% do total</div>
+                                <div class="metric-trend">⚡ Avaliar individualmente</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="metric-card">
+                                <div class="metric-label">2 Cliques</div>
+                                <div class="metric-value">67</div>
+                                <div class="metric-description">5,2% do total</div>
+                                <div class="metric-trend">📊 Avaliar individualmente</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="metric-card" style="border-color: var(--accent-success);">
+                                <div class="metric-label">3+ Cliques</div>
+                                <div class="metric-value" style="color: var(--accent-success);">225</div>
+                                <div class="metric-description">17,4% do total</div>
+                                <div class="metric-trend up">✅ Manter e otimizar</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: var(--space-xl); padding: var(--space-lg); background: var(--bg-surface); border-left: 4px solid var(--accent-danger);">
+                        <h4 style="margin-top: 0; color: var(--accent-danger);">🔴 Interseção Crítica: 0 Cliques +
+                            Thin Content</h4>
+                        <table class="data-table" style="margin-top: var(--space-md);">
+                            <thead>
+                                <tr>
+                                    <th>Critério</th>
+                                    <th>Quantidade</th>
+                                    <th>% do Site</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Páginas com 0 cliques (GSC)</td>
+                                    <td><strong>888</strong></td>
+                                    <td>68,7%</td>
+                                    <td><span class="status-badge high">Alto Risco</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Thin content (<100 palavras)</td>
+                                    <td><strong>627</strong></td>
+                                    <td>48,5%</td>
+                                    <td><span class="status-badge high">Alto Risco</span></td>
+                                </tr>
+                                <tr style="background: rgba(225, 110, 169, 0.1);">
+                                    <td><strong>Interseção estimada (0 cliques + thin)</strong></td>
+                                    <td><strong>~500-550</strong></td>
+                                    <td><strong>~40%</strong></td>
+                                    <td><span class="status-badge critical">CRÍTICO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pruning Recommendation -->
+            <div class="col-12">
+                <div class="section"
+                    style="border-color: var(--primary); background: linear-gradient(135deg, rgba(0, 158, 227, 0.03) 0%, var(--bg-surface) 100%);">
+                    <h3>📋 Recomendação Estratégica de Content Pruning</h3>
+                    <div
+                        style="margin-top: var(--space-lg); padding: var(--space-lg); background: var(--bg-canvas); border-radius: 4px;">
+                        <p style="font-size: 1.25rem; margin: 0; color: var(--primary);"><strong>Porcentagem
+                                recomendada para pruning: 35-40% das páginas</strong></p>
+                        <p style="margin-top: var(--space-sm); color: var(--text-secondary);">Baseado na análise,
+                            recomendamos aplicar content pruning em aproximadamente <strong>450-520 páginas</strong>
+                            seguindo critérios priorizados:</p>
+                    </div>
+
+                    <h4 style="margin-top: var(--space-xl);">Critérios de Pruning por Prioridade</h4>
+                    <table class="data-table" style="margin-top: var(--space-md);">
+                        <thead>
+                            <tr>
+                                <th>Prioridade</th>
+                                <th>Critério</th>
+                                <th>Ação Recomendada</th>
+                                <th>Qtd. Estimada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: rgba(225, 110, 169, 0.05);">
+                                <td><span class="status-badge critical">1 - Crítica</span></td>
+                                <td>0 cliques + very thin (<100 palavras)</td>
+                                <td><strong>Deletar</strong> ou redirect 301</td>
+                                <td>~150 páginas</td>
+                            </tr>
+                            <tr style="background: rgba(255, 110, 0, 0.05);">
+                                <td><span class="status-badge high">2 - Alta</span></td>
+                                <td>0 cliques + thin (100-300 palavras)</td>
+                                <td><strong>Consolidar</strong> em pillar page</td>
+                                <td>~200 páginas</td>
+                            </tr>
+                            <tr style="background: rgba(245, 201, 79, 0.05);">
+                                <td><span class="status-badge medium">3 - Média</span></td>
+                                <td>0 cliques + conteúdo duplicado</td>
+                                <td><strong>Redirect 301</strong> para página principal</td>
+                                <td>~100 páginas</td>
+                            </tr>
+                            <tr>
+                                <td><span class="status-badge info">4 - Baixa</span></td>
+                                <td>1-2 cliques + thin content</td>
+                                <td><strong>Expandir</strong> ou consolidar</td>
+                                <td>~70 páginas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pruning Strategy Phases -->
+            <div class="col-12">
+                <div class="section">
+                    <h3>🎯 Estratégia de Execução em 3 Fases</h3>
+                    <div class="grid" style="margin-top: var(--space-lg);">
+                        <div class="col-4">
+                            <div
+                                style="padding: var(--space-lg); background: var(--bg-surface); border-top: 3px solid var(--accent-danger); height: 100%;">
+                                <h4 style="color: var(--accent-danger); margin-top: 0;">Fase 1: Limpeza Imediata</h4>
+                                <p style="color: var(--text-secondary); margin-bottom: var(--space-md);">~150 páginas
+                                </p>
+                                <ul style="color: var(--text-secondary); padding-left: 1.25rem;">
+                                    <li>Deletar páginas com <50 palavras sem valor de busca</li>
+                                    <li>Aplicar redirect 301 para páginas relacionadas ou home</li>
+                                    <li>Foco em páginas institucionais vazias</li>
+                                    <li><strong>Prazo: 1-2 semanas</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div
+                                style="padding: var(--space-lg); background: var(--bg-surface); border-top: 3px solid var(--accent-warning); height: 100%;">
+                                <h4 style="color: var(--accent-warning); margin-top: 0;">Fase 2: Consolidação</h4>
+                                <p style="color: var(--text-secondary); margin-bottom: var(--space-md);">~200 páginas
+                                </p>
+                                <ul style="color: var(--text-secondary); padding-left: 1.25rem;">
+                                    <li>Identificar grupos de conteúdo similar (ex: todas sobre NR-1)</li>
+                                    <li>Criar pillar pages robustas consolidando conteúdo</li>
+                                    <li>Redirect 301 das páginas antigas para pillar page</li>
+                                    <li><strong>Prazo: 3-4 semanas</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div
+                                style="padding: var(--space-lg); background: var(--bg-surface); border-top: 3px solid var(--primary); height: 100%;">
+                                <h4 style="color: var(--primary); margin-top: 0;">Fase 3: Expansão/Eliminação</h4>
+                                <p style="color: var(--text-secondary); margin-bottom: var(--space-md);">~100 páginas
+                                </p>
+                                <ul style="color: var(--text-secondary); padding-left: 1.25rem;">
+                                    <li>Avaliar páginas com algum potencial de busca</li>
+                                    <li>Expandir conteúdo para 800+ palavras se houver demanda</li>
+                                    <li>Eliminar se não houver relevância para o negócio</li>
+                                    <li><strong>Prazo: 5-6 semanas</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expected Impact -->
+            <div class="col-12">
+                <div class="section"
+                    style="border-color: var(--accent-success); background: linear-gradient(135deg, rgba(0, 158, 227, 0.03) 0%, var(--bg-surface) 100%);">
+                    <h3 style="color: var(--accent-success);">📈 Impacto Esperado do Content Pruning</h3>
+                    <table class="data-table" style="margin-top: var(--space-lg);">
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Antes</th>
+                                <th>Depois (estimado)</th>
+                                <th>Variação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Total de páginas indexadas</td>
+                                <td>~1.300</td>
+                                <td>~800-850</td>
+                                <td style="color: var(--accent-success);"><strong>-35-40%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Crawl budget efficiency</td>
+                                <td>Diluído</td>
+                                <td>Concentrado</td>
+                                <td style="color: var(--accent-success);"><strong>+50-70%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Qualidade média do conteúdo</td>
+                                <td>Baixa</td>
+                                <td>Alta</td>
+                                <td style="color: var(--accent-success);"><strong>+100%+</strong></td>
+                            </tr>
+                            <tr>
+                                <td>CTR médio esperado</td>
+                                <td>0,8%</td>
+                                <td>1,5-2%</td>
+                                <td style="color: var(--accent-success);"><strong>+87-150%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Autoridade por página</td>
+                                <td>Diluída</td>
+                                <td>Concentrada</td>
+                                <td style="color: var(--accent-success);"><strong>+40-60%</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div
+                        style="margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(245, 201, 79, 0.1); border-left: 4px solid var(--accent-warning);">
+                        <h4 style="margin-top: 0; color: var(--accent-warning);">⚠️ Alerta Importante - Checklist
+                            Antes de Executar</h4>
+                        <ol style="color: var(--text-secondary); padding-left: 1.5rem; margin: 0;">
+                            <li><strong>Backup completo</strong> de todas as URLs e conteúdos</li>
+                            <li><strong>Verificar backlinks</strong> - páginas com backlinks externos devem ter
+                                redirect 301</li>
+                            <li><strong>Mapear conversões</strong> - não deletar páginas que geram leads</li>
+                            <li><strong>Implementar redirects</strong> antes de deletar qualquer página</li>
+                            <li><strong>Monitorar GSC</strong> por 30 dias após cada fase</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Structure Analysis -->
+        <section class="grid" style="margin-bottom: var(--space-3xl);">
+            <div class="col-12">
+                <h2>Content Architecture & Structure</h2>
+            </div>
+
+            <div class="col-12">
+                <div class="callout">
+                    <div class="callout-title">📐 Structural Analysis: Hub & Spoke Model Assessment</div>
+
+                    <div class="grid" style="margin-top: var(--space-lg); gap: var(--space-xl);">
+                        <div class="col-6">
+                            <h4 style="margin-bottom: var(--space-md); color: var(--text-primary);">Current State</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.8;">
+                                The site employs a "Hub & Spoke" content architecture where main topic pages (hubs)
+                                link to supporting subtopic pages (spokes). However, analysis reveals that:
+                            </p>
+                            <ul
+                                style="margin-left: var(--space-xl); line-height: 1.8; color: var(--text-secondary); margin-top: var(--space-md);">
+                                <li><strong>Hub pages (25 pages)</strong> average 1,200 words — adequate depth</li>
+                                <li><strong>Spoke pages (632 pages)</strong> average only 240 words — critically thin
+                                </li>
+                                <li><strong>Orphan pages (78 pages)</strong> lack hub connections — poor internal
+                                    linking</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6">
+                            <h4 style="margin-bottom: var(--space-md); color: var(--text-primary);">Recommended
+                                Structure</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.8;">
+                                To maximize SEO value and user engagement:
+                            </p>
+                            <ul
+                                style="margin-left: var(--space-xl); line-height: 1.8; color: var(--text-secondary); margin-top: var(--space-md);">
+                                <li><strong>Hub pages:</strong> Expand to 1,500-3,000 words with comprehensive topic
+                                    coverage</li>
+                                <li><strong>Spoke pages:</strong> Minimum 800 words with detailed explanations,
+                                    examples, use cases</li>
+                                <li><strong>Internal linking:</strong> Implement bidirectional linking between hubs and
+                                    spokes</li>
+                                <li><strong>Topic clusters:</strong> Group related spokes under thematic hubs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: var(--space-xl); padding: var(--space-lg); background: var(--bg-section); border-radius: var(--border-radius);">
+                        <h4 style="margin-bottom: var(--space-md); color: var(--text-primary);">Implementation Priority
+                        </h4>
+                        <ol style="margin-left: var(--space-xl); line-height: 2; color: var(--text-secondary);">
+                            <li><strong>Phase 1:</strong> Expand the 187 pages with 0-100 words (highest priority,
+                                likely de-indexed)</li>
+                            <li><strong>Phase 2:</strong> Expand the 445 pages with 101-300 words (at-risk category)
+                            </li>
+                            <li><strong>Phase 3:</strong> Strengthen the 25 hub pages with additional depth (1,500-2,000
+                                words)</li>
+                            <li><strong>Phase 4:</strong> Connect orphan pages to relevant hubs via strategic internal
+                                links</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Content Database -->
+        <section class="grid">
+            <div class="col-12">
+                <h2>Complete Content & Meta Database</h2>
+            </div>
+
+            <div class="col-12">
+                <div class="section">
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">
+                        Access the complete database of all 893 pages with quality scores, word counts, meta status,
+                        and specific issues. Use browser search to filter by URL, issue type, or status.
+                    </p>
+
+                    <button class="btn btn-primary" data-csv-source="csv/pages-with-issues.csv">
+                        📊 Load Complete Content Database (893 Pages)
+                    </button>
+
+                    <div id="database-container" style="margin-top: var(--space-xl);"></div>
+
+                    <div class="grid" style="margin-top: var(--space-2xl); gap: var(--space-xl);">
+                        <div class="col-6">
+                            <h3 style="margin-bottom: var(--space-md);">Content Expansion Framework</h3>
+                            <div
+                                style="background: var(--bg-section); padding: var(--space-lg); border-radius: var(--border-radius); border-left: 4px solid var(--primary);">
+                                <h4 style="margin-bottom: var(--space-md); color: var(--text-primary);">For Each Thin
+                                    Content Page:</h4>
+                                <ol style="margin-left: var(--space-lg); line-height: 2; color: var(--text-secondary);">
+                                    <li>Add detailed definition/explanation section (200-300 words)</li>
+                                    <li>Include 2-3 practical examples or use cases (150-250 words)</li>
+                                    <li>Add "Common Questions" FAQ section (200-300 words)</li>
+                                    <li>Include relevant statistics, data, or research (100-150 words)</li>
+                                    <li>Add 5-8 strategic internal links to related pages</li>
+                                    <li>Include multimedia (images, diagrams, videos) where applicable</li>
+                                    <li>Add "Related Topics" or "Further Reading" section</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h3 style="margin-bottom: var(--space-md);">Expected Timeline & Resources</h3>
+                            <div
+                                style="background: var(--bg-section); padding: var(--space-lg); border-radius: var(--border-radius);">
+                                <table style="width: 100%; font-size: 0.875rem;">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--border-color-dark);">
+                                            <th style="padding: var(--space-sm) 0; text-align: left; font-weight: 600;">
+                                                Phase</th>
+                                            <th style="padding: var(--space-sm) 0; text-align: left; font-weight: 600;">
+                                                Pages</th>
+                                            <th style="padding: var(--space-sm) 0; text-align: left; font-weight: 600;">
+                                                Timeline</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="border-bottom: 1px solid var(--border-color);">
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">
+                                                Critical (0-100w)</td>
+                                            <td style="padding: var(--space-sm) 0; font-weight: 600;">187</td>
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">Weeks
+                                                5-8</td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid var(--border-color);">
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">High
+                                                Risk (101-300w)</td>
+                                            <td style="padding: var(--space-sm) 0; font-weight: 600;">445</td>
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">Weeks
+                                                9-14</td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid var(--border-color);">
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">Hub
+                                                Enhancement</td>
+                                            <td style="padding: var(--space-sm) 0; font-weight: 600;">25</td>
+                                            <td style="padding: var(--space-sm) 0; color: var(--text-secondary);">Weeks
+                                                15-16</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: var(--space-sm) 0; font-weight: 600;">Total</td>
+                                            <td
+                                                style="padding: var(--space-sm) 0; font-weight: 600; color: var(--primary);">
+                                                657</td>
+                                            <td style="padding: var(--space-sm) 0; font-weight: 600;">16 weeks</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div
+                                    style="margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--border-color);">
+                                    <h4
+                                        style="margin-bottom: var(--space-sm); color: var(--text-primary); font-size: 0.875rem;">
+                                        Resource Requirements</h4>
+                                    <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">
+                                        Assumes 1-2 dedicated content writers producing 5-8 expanded pages per day.
+                                        Estimated total: 40-50 pages/week.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/swiss-main.js"></script>
+</body>
+
+</html>

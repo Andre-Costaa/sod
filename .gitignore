@@ -1,0 +1,13 @@
+# Ignorar tudo
+*
+
+# Exceto a pasta output com o site
+!output/
+!output/*.html
+!output/css/
+!output/css/*
+!output/js/
+!output/js/*
+
+# Manter o .gitignore
+!.gitignore
